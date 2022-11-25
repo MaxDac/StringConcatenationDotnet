@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>StringConcatenationTest.Benchy-20221125-121322</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 11 (10.0.22621.819)
+Intel Core i9-10900K CPU 3.70GHz, 1 CPU, 20 logical and 10 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 6.0.11 (6.0.1122.52304), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.11 (6.0.1122.52304), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>         Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Add2Strings</td><td>8.277 ns</td><td>0.1459 ns</td><td>0.1365 ns</td><td>8.260 ns</td><td>0.0053</td><td>56 B</td>
+</tr><tr><td>Join2Strings</td><td>20.201 ns</td><td>0.3838 ns</td><td>0.3402 ns</td><td>20.169 ns</td><td>0.0092</td><td>96 B</td>
+</tr><tr><td>Concat2StringAsSpan</td><td>10.449 ns</td><td>0.2540 ns</td><td>0.2376 ns</td><td>10.364 ns</td><td>0.0053</td><td>56 B</td>
+</tr><tr><td>Add2StringsWithCreate</td><td>8.983 ns</td><td>0.2407 ns</td><td>0.5181 ns</td><td>8.762 ns</td><td>0.0053</td><td>56 B</td>
+</tr></tbody></table>
+</body>
+</html>
