@@ -1,7 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
-namespace ConsoleApp1
+namespace StrngConcatenationTest
 {
 	internal class Program
 	{
