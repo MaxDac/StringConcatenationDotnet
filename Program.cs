@@ -50,8 +50,7 @@ namespace StringConcatenationTest
 			{
 				int index = state.Item1.Length;
 				state.Item1.AsSpan().CopyTo(span);
-				//state.Item2.AsSpan().CopyTo(span.Slice(index, state.Item2.Length));
-
+				state.Item2.AsSpan().CopyTo(span.Slice(index, state.Item2.Length));
 			});
 			return myString;
 		}
